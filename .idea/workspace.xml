@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="test commit2">
+    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="test commit4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/new_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_module.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "KIMovchanin"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e451f35d-eaf7-49ce-9393-c1d81e699198" />
+        <option name="url" value="https://github.com/KIMovchanin/testPyGame.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
@@ -96,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698745459105</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test commit4">
+      <option name="closed" value="true" />
+      <created>1698745523798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698745523798</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +136,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
     <MESSAGE value="test commit2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit2" />
+    <MESSAGE value="test commit4" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit4" />
   </component>
 </project>
