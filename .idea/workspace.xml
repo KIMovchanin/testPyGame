@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="5 add idle animation and add some rules for walking">
+    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="6 add jump">
+      <change afterPath="$PROJECT_DIR$/animplayer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animzombie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -175,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698768609338</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="6 add jump">
+      <option name="closed" value="true" />
+      <created>1698770981478</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698770981478</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +208,7 @@
     <MESSAGE value="3 add image, font and text" />
     <MESSAGE value="4 add animation, music and changed the &quot;tick&quot; of the game" />
     <MESSAGE value="5 add idle animation and add some rules for walking" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 add idle animation and add some rules for walking" />
+    <MESSAGE value="6 add jump" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 add jump" />
   </component>
 </project>
