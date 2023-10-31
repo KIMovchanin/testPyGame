@@ -1,38 +1,69 @@
 import pygame
 
+# добавили класс Clock в игру, чтобы в конце программы сделать "тик" в игре медленнее
+clock = pygame.time.Clock()
+
 # обазетльный метод в начале для инициализации игры
 pygame.init()
 # указываем размер экрана в формате (ширина, высота)
-screen = pygame.display.set_mode((1000, 700))  # третий параметр говорит нам о том как запустить приложение.
+screen = pygame.display.set_mode((1200, 600))  # третий параметр говорит нам о том как запустить приложение.
                                               # Указав flags=pygame.NOFRAME не будет кнопок закрытия/сворачивания
 # добавляем название для приложения
 pygame.display.set_caption("PyGame Ijinerium")
 # подгружаю картинку в проект
-icon = pygame.image.load('Materials/inj.jpg')
+icon = pygame.image.load('Materials/Images/inj.jpg')
 # утсанавливаю картинку в качестве иконки
 pygame.display.set_icon(icon)
+bg = pygame.image.load('Materials/Images/back.jpg')
+player = pygame.image.load('Materials/Images/Anim/run_r/1.png')
 
-# создаём объект square рисуя через класс Surface() квадрат
-square = pygame.Surface((50, 170))   # принимает в качестве параметра кортеж со значениями ширины и высоты
-square.fill((50, 170, 80))
+# создаём список для анимации
+run_right = [
+    pygame.image.load('Materials/Images/Anim/run_r/1.png'),
+    pygame.image.load('Materials/Images/Anim/run_r/2.png'),
+    pygame.image.load('Materials/Images/Anim/run_r/3.png'),
+    pygame.image.load('Materials/Images/Anim/run_r/4.png'),
+    pygame.image.load('Materials/Images/Anim/run_r/5.png'),
+    pygame.image.load('Materials/Images/Anim/run_r/6.png'),
+    pygame.image.load('Materials/Images/Anim/run_r/7.png'),
+    pygame.image.load('Materials/Images/Anim/run_r/8.png')
+]
 
-# создаём надпись
-myfont = pygame.font.Font('Materials/Fonts/Agbalumo-Regular.ttf', 40)  # первым параметром получает шрифт, вторым - размер шрифта
-# дополнительные характеристики
-text_surface = myfont.render('Injinerium', False, 'Yellow')    # мы можем указать здесь сам текст, что будет отображён, цвет, задний фон и тд
-# подгружаю картинку
-image = pygame.image.load('C:/Users/kondr/OneDrive/Рабочий стол/Арты/hThxjaFdCbQ.jpg')
+run_left = [
+    pygame.image.load('Materials/Images/Anim/run_l/1.png'),
+    pygame.image.load('Materials/Images/Anim/run_l/2.png'),
+    pygame.image.load('Materials/Images/Anim/run_l/3.png'),
+    pygame.image.load('Materials/Images/Anim/run_l/4.png'),
+    pygame.image.load('Materials/Images/Anim/run_l/5.png'),
+    pygame.image.load('Materials/Images/Anim/run_l/6.png'),
+    pygame.image.load('Materials/Images/Anim/run_l/7.png'),
+    pygame.image.load('Materials/Images/Anim/run_l/8.png')
+]
+
+# создали счётчик для перебора анимаций картинок персонажа
+player_anim_count = 0
+bg_x = 0
+
+# подгружаем музыку
+bg_sound = pygame.mixer.Sound('Materials/Music/ForestWalk.mp3')
+bg_sound.play()
 
 running = True
 while running:
+    screen.blit(bg, (bg_x, 0))
+    screen.blit(bg, (bg_x + 1200, 0))
+    screen.blit(run_right[player_anim_count], (100, 400))
 
-    # рисуем на экране наш квадрат с помощью метода blit
-    screen.blit(square, (0, 0))    # принимает два параметра, первый - сам объект. Второй - координаты спавна
-    screen.blit(text_surface, (200, 200))
-    # другой способ рисования в 1 строку кода
-    # рисуем объект круг на поверхности "screen", выбираю цвет, кортежем передаю координаты и задаю радиус круга
-    pygame.draw.circle(screen, 'Red', (100, 40), 30)
-    screen.blit(image, (400, 0))
+    if player_anim_count == 7:
+        player_anim_count = 0
+    else:
+        player_anim_count += 1
+
+    # эта перемення указана там, где мы доболвяем фон на экран и сделали её чтобы сдвигать фон влево
+    bg_x -= 7
+    if bg_x <= -1200:
+        bg_x = 0
+
     # обновление экрана
     pygame.display.update()
 
@@ -42,5 +73,4 @@ while running:
             running = False
             pygame.quit()               # то игры закроется. После этого действия никакие другие не должны быть
 
-
-
+    clock.tick(14)
