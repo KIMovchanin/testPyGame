@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="test commit4">
+    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="1 init without errors">
+      <change afterPath="$PROJECT_DIR$/Materials/inj.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_module.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,11 @@
     "last_opened_file_path": "C:/Users/kondr/PycharmProjects/injiniriumGame"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kondr\PycharmProjects\injiniriumGame\Materials" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="injiniriumGame" />
@@ -119,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698745523798</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1 init without errors">
+      <option name="closed" value="true" />
+      <created>1698746904023</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698746904023</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +150,7 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="test commit2" />
     <MESSAGE value="test commit4" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit4" />
+    <MESSAGE value="1 init without errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 init without errors" />
   </component>
 </project>
