@@ -4,44 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="7 add images of zombie">
-      <change afterPath="$PROJECT_DIR$/animbat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
+    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="8 add images of bat, made a spawn for zombies with random">
+      <change afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/idle/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/idle/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/idle/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/idle/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/idle/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/idle/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/idle/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/idle/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/idle/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/idle/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/idle/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/idle/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_l/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_l/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/run_r/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/run_r/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/Anim/zombie_walk_l/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animplayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/animplayer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animzombie.py" beforeDir="false" afterPath="$PROJECT_DIR$/animzombie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698773114772</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="8 add images of bat, made a spawn for zombies with random">
+      <option name="closed" value="true" />
+      <created>1698779466824</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1698779466824</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,6 +225,7 @@
     <MESSAGE value="5 add idle animation and add some rules for walking" />
     <MESSAGE value="6 add jump" />
     <MESSAGE value="7 add images of zombie" />
-    <option name="LAST_COMMIT_MESSAGE" value="7 add images of zombie" />
+    <MESSAGE value="8 add images of bat, made a spawn for zombies with random" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 add images of bat, made a spawn for zombies with random" />
   </component>
 </project>
