@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="1 init without errors">
-      <change afterPath="$PROJECT_DIR$/Materials/inj.jpg" afterDir="false" />
+    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="2 change backgroun, icon and name of program">
+      <change afterPath="$PROJECT_DIR$/Materials/Fonts/Agbalumo-Regular.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -57,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kondr\PycharmProjects\injiniriumGame\Materials\Fonts" />
       <recent name="C:\Users\kondr\PycharmProjects\injiniriumGame\Materials" />
     </key>
   </component>
@@ -132,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698746904023</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2 change backgroun, icon and name of program">
+      <option name="closed" value="true" />
+      <created>1698747713632</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698747713632</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +160,7 @@
     <MESSAGE value="test commit2" />
     <MESSAGE value="test commit4" />
     <MESSAGE value="1 init without errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 init without errors" />
+    <MESSAGE value="2 change backgroun, icon and name of program" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 change backgroun, icon and name of program" />
   </component>
 </project>
