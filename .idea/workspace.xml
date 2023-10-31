@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="3 add image, font and text">
-      <change afterPath="$PROJECT_DIR$/Materials/Images/back.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Materials/Music/ForestWalk.mp3" afterDir="false" />
+    <list default="true" id="b16d490c-cf72-46a2-9203-c72ce3337233" name="Changes" comment="4 add animation, music and changed the &quot;tick&quot; of the game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Materials/inj.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Materials/Images/inj.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698749151963</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="4 add animation, music and changed the &quot;tick&quot; of the game">
+      <option name="closed" value="true" />
+      <created>1698766002395</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698766002395</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +180,7 @@
     <MESSAGE value="1 init without errors" />
     <MESSAGE value="2 change backgroun, icon and name of program" />
     <MESSAGE value="3 add image, font and text" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 add image, font and text" />
+    <MESSAGE value="4 add animation, music and changed the &quot;tick&quot; of the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="4 add animation, music and changed the &quot;tick&quot; of the game" />
   </component>
 </project>

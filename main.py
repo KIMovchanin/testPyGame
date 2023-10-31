@@ -3,6 +3,8 @@ import pygame
 # добавили класс Clock в игру, чтобы в конце программы сделать "тик" в игре медленнее
 clock = pygame.time.Clock()
 
+
+
 # обазетльный метод в начале для инициализации игры
 pygame.init()
 # указываем размер экрана в формате (ширина, высота)
@@ -44,15 +46,32 @@ run_left = [
 player_anim_count = 0
 bg_x = 0
 
+#создаём переменные для передвижения игрока
+player_speed = 5
+player_x = 100
+player_y = 400
+
 # подгружаем музыку
 bg_sound = pygame.mixer.Sound('Materials/Music/ForestWalk.mp3')
-bg_sound.play()
+bg_sound.play()    # запускаем музыку
 
 running = True
 while running:
+
     screen.blit(bg, (bg_x, 0))
     screen.blit(bg, (bg_x + 1200, 0))
-    screen.blit(run_right[player_anim_count], (100, 400))
+    screen.blit(run_right[player_anim_count], (player_x, player_y))
+
+    # создаём переменну содержащую в себе нажатую клавишу
+    keys = pygame.key.get_pressed()
+    # делаем проверку что если клавиша, что была нажата игроков это d, то идём вправо
+    if keys[pygame.K_d]:
+        player_x += player_speed
+    elif keys[pygame.K_a]:
+        player_x -= player_speed
+
+
+
 
     if player_anim_count == 7:
         player_anim_count = 0
