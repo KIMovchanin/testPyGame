@@ -1,9 +1,11 @@
-import pygame, animzombie, animplayer
+import pygame, random, animzombie, animplayer, animbat
 # добавили класс Clock в игру, чтобы в конце программы сделать "тик" в игре медленнее
 clock = pygame.time.Clock()
 
 ap = animplayer
+ab = animbat
 az = animzombie
+
 
 # обазетльный метод в начале для инициализации игры
 pygame.init()
@@ -11,32 +13,37 @@ pygame.init()
 screen = pygame.display.set_mode((1200, 600))  # третий параметр говорит нам о том как запустить приложение.
                                               # Указав flags=pygame.NOFRAME не будет кнопок закрытия/сворачивания
 # добавляем название для приложения
-pygame.display.set_caption("PyGame Ijinerium")
+pygame.display.set_caption("PyGame Injinerium")
 # подгружаю картинку в проект
-icon = pygame.image.load('Materials/Images/inj.jpg')
+icon = pygame.image.load('Materials/Images/inj.jpg').convert()
 # утсанавливаю картинку в качестве иконки
 pygame.display.set_icon(icon)
-bg = pygame.image.load('Materials/Images/back.jpg')
+bg = pygame.image.load('Materials/Images/back.jpg').convert()
 #player = ap.run_right[0]           # pygame.image.load('Materials/Images/Anim/run_r/1.png')
-zombie = az.zombie_walk_r[0]
-zombie_x = 700
+zombie = az.zombie_walk_l[0]
+
 
 # создали счётчик для перебора анимаций картинок персонажа
 player_anim_count_run = 0
 player_anim_count_idle = 0
+zombie_anim_count_walk = 0
 bg_x = 0
 
 #создаём переменные для передвижения игрока
 player_speed = 10
-Jump_force = 25
+Jump_force = 30
 jump_count = Jump_force
 is_jump = False
 player_x = 100
 player_y = 400
-
+zombie_list_in_game = []
 # подгружаем музыку
 bg_sound = pygame.mixer.Sound('Materials/Music/ForestWalk.mp3')
 bg_sound.play()    # запускаем музыку
+
+#  создали таймер для спавна зомби
+zombie_timer = pygame.USEREVENT + 1
+pygame.time.set_timer(zombie_timer, random.randint(700, 5000))
 
 running = True
 while running:
@@ -45,18 +52,35 @@ while running:
 
     screen.blit(bg, (bg_x, 0))
     screen.blit(bg, (bg_x + 1200, 0))
-    if keys[pygame.K_d]:
+
+    # создаём хитбоксы игрока и зомби
+    player_rect = ap.run_right[0].get_rect(topleft=(player_x, player_y))
+
+    # когда у нас срабатывает USEREVENT (мы сами указываем когда он срабатывает) в конце цикла срабатывает условие и в
+    # наш список добавляется коллайдер за границами экрана. А в скрипте под этим комментарием мы это считываем и если
+    # в списке что то появляется то мы перебираем это и рисуем на экране картинку по координатам того колайдера, что мы
+    # добавляем в конце, затем изменяем x для этого элемента постоянно на - 10 и проверяем касается ли коллайдер игрока
+    # коллайдера зомби и в случае соприкосновения мы теряем хп
+    if zombie_list_in_game:
+        for el in zombie_list_in_game:
+            screen.blit(az.zombie_walk_l[zombie_anim_count_walk], el)
+            el.x -= 10
+            # а теперь прописываем что происходит при соприкосновении игрока с зомби
+            if player_rect.colliderect(el):
+                print('-1 hp')
+
+    if keys[pygame.K_RIGHT]:
         screen.blit(ap.run_right[player_anim_count_run], (player_x, player_y))
-    elif keys[pygame.K_a]:
+    elif keys[pygame.K_LEFT]:
         screen.blit(ap.run_left[player_anim_count_run], (player_x, player_y))
     else:
         screen.blit(ap.idle[player_anim_count_idle], (player_x, player_y))
 
     # создаём переменну содержащую в себе нажатую клавишу
     # делаем проверку что если клавиша, что была нажата игроков это d, то идём вправо
-    if keys[pygame.K_d] and player_x < 1100:
+    if keys[pygame.K_RIGHT] and player_x < 1100:
         player_x += player_speed
-    elif keys[pygame.K_a] and player_x > 0:
+    elif keys[pygame.K_LEFT] and player_x > 0:
         player_x -= player_speed
 
 # как работает прыжок. Мы создали переменную, что хранит в себе False. Пока она False мы не прыграем.
@@ -70,7 +94,7 @@ while running:
 # Мы нажмём пробел и превратила is_jump в True после нажатия пробела.
 
     if not is_jump:
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_UP]:
             is_jump = True
     else:
         if jump_count >= -Jump_force:
@@ -94,6 +118,11 @@ while running:
     else:
         player_anim_count_idle += 1
 
+    if zombie_anim_count_walk == len(az.zombie_walk_l) - 1:
+        zombie_anim_count_walk = 0
+    else:
+        zombie_anim_count_walk += 1
+
     # эта перемення указана там, где мы доболвяем фон на экран и сделали её чтобы сдвигать фон влево
     # bg_x -= 7
     # if bg_x <= -1200:
@@ -107,5 +136,9 @@ while running:
         if event.type == pygame.QUIT:   # если событие это нажатие на выход
             running = False
             pygame.quit()               # то игры закроется. После этого действия никакие другие не должны быть
+        # при срабатывании USEREVENT добавляем в список коллайдер от зомби, по координатам которого мы будем рисовать на
+        # экране самого зомби
+        if event.type == zombie_timer:
+            zombie_list_in_game.append(zombie.get_rect(topleft=(1220, 430)))
 
     clock.tick(14)
