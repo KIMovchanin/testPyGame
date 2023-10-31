@@ -41,13 +41,22 @@ run_left = [
     pygame.image.load('Materials/Images/Anim/run_l/7.png'),
     pygame.image.load('Materials/Images/Anim/run_l/8.png')
 ]
+idle = [
+    pygame.image.load('Materials/Images/Anim/idle/1.png'),
+    pygame.image.load('Materials/Images/Anim/idle/2.png'),
+    pygame.image.load('Materials/Images/Anim/idle/3.png'),
+    pygame.image.load('Materials/Images/Anim/idle/4.png'),
+    pygame.image.load('Materials/Images/Anim/idle/5.png'),
+    pygame.image.load('Materials/Images/Anim/idle/6.png')
+]
 
 # создали счётчик для перебора анимаций картинок персонажа
-player_anim_count = 0
+player_anim_count_run = 0
+player_anim_count_idle = 0
 bg_x = 0
 
 #создаём переменные для передвижения игрока
-player_speed = 5
+player_speed = 8
 player_x = 100
 player_y = 400
 
@@ -58,30 +67,39 @@ bg_sound.play()    # запускаем музыку
 running = True
 while running:
 
+    keys = pygame.key.get_pressed()
+
     screen.blit(bg, (bg_x, 0))
     screen.blit(bg, (bg_x + 1200, 0))
-    screen.blit(run_right[player_anim_count], (player_x, player_y))
+    if keys[pygame.K_d]:
+        screen.blit(run_right[player_anim_count_run], (player_x, player_y))
+    elif keys[pygame.K_a]:
+        screen.blit(run_left[player_anim_count_run], (player_x, player_y))
+    else:
+        screen.blit(idle[player_anim_count_idle], (player_x, player_y))
 
     # создаём переменну содержащую в себе нажатую клавишу
-    keys = pygame.key.get_pressed()
     # делаем проверку что если клавиша, что была нажата игроков это d, то идём вправо
-    if keys[pygame.K_d]:
+    if keys[pygame.K_d] and player_x < 1100:
         player_x += player_speed
-    elif keys[pygame.K_a]:
+    elif keys[pygame.K_a] and player_x > 0:
         player_x -= player_speed
 
-
-
-
-    if player_anim_count == 7:
-        player_anim_count = 0
+    # меняем "фрейм" к которому мы обращаемся
+    if player_anim_count_run == len(run_right) - 1:
+        player_anim_count_run = 0
     else:
-        player_anim_count += 1
+        player_anim_count_run += 1
+
+    if player_anim_count_idle == len(idle) - 1:
+        player_anim_count_idle = 0
+    else:
+        player_anim_count_idle += 1
 
     # эта перемення указана там, где мы доболвяем фон на экран и сделали её чтобы сдвигать фон влево
-    bg_x -= 7
-    if bg_x <= -1200:
-        bg_x = 0
+    # bg_x -= 7
+    # if bg_x <= -1200:
+    #     bg_x = 0
 
     # обновление экрана
     pygame.display.update()
