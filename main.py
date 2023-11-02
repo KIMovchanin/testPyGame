@@ -1,15 +1,10 @@
-import animbat
-import animplayer
-import animzombie
+import animplayer as ap
+import animzombie as az
 import pygame
-
+import bdconnect as db
 
 # добавили класс Clock в игру, чтобы в конце программы сделать "тик" в игре медленнее
 clock = pygame.time.Clock()
-
-ap = animplayer
-ab = animbat
-az = animzombie
 
 # обаятельный метод в начале для инициализации игры
 pygame.init()
@@ -53,6 +48,8 @@ label = pygame.font.Font('Materials/Fonts/Quicksand-VariableFont_wght.ttf', 40)
 lose_label = label.render('You lose!', False, 'DarkRed')
 restart_label = label.render('Play again', False, 'DarkGreen')
 restart_label_rect = restart_label.get_rect(topleft=(500, 350))
+
+db.addInDb()
 
 # создаём переменную для понимания проиграл игрок или нет
 gameplay = True
