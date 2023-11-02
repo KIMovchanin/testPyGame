@@ -49,7 +49,7 @@ lose_label = label.render('You lose!', False, 'DarkRed')
 restart_label = label.render('Play again', False, 'DarkGreen')
 restart_label_rect = restart_label.get_rect(topleft=(500, 350))
 
-db.addInDb()
+db.addindb()
 
 # создаём переменную для понимания проиграл игрок или нет
 gameplay = True
