@@ -42,9 +42,9 @@ def startmenu():
         if goodbye_game_rect.collidepoint(mouse) and pygame.mouse.get_pressed()[0]:
             pygame.quit()
 
-        for event in pygame.event.get():  # за счёт метода pygame.event.get() мы получаем список из всех возможных
-            # событий
+        for event in pygame.event.get():  # за счёт метода pygame.event.get() мы получаем список из всех возможных событий
             if event.type == pygame.QUIT:  # если событие это нажатие на выход
                 running = False
+                pygame.quit()
 
     pygame.quit()

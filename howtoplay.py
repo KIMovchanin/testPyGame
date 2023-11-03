@@ -9,8 +9,8 @@ def howtoplay():
     label = pygame.font.Font('Materials/Fonts/Quicksand-VariableFont_wght.ttf', 20)
 
     text_label1 = label.render('You need to survive 30 seconds and you will win, but you have only 7 bullets.', False, 'White')
-    text_label2 = label.render('Kill 1 zombie = +10 points.', False, 'White')
-    text_label3 = label.render('Survive 1 second = +100 points.', False, 'White')
+    text_label2 = label.render('Kill 1 zombie = +100 points.', False, 'White')
+    text_label3 = label.render('Survive 1 second = +10 points.', False, 'White')
 
     move_label = label.render('For move use arrows (<- and ->).', False, 'White')
 

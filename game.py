@@ -3,7 +3,11 @@ import animzombie as az
 import pygame
 import bdconnect as db
 import bullet as bl
+from math import ceil
+import win
 
+bullets = []
+zombie_list_in_game = []
 def play():
     # добавили класс Clock в игру, чтобы в конце программы сделать "тик" в игре медленнее
     clock = pygame.time.Clock()
@@ -37,7 +41,7 @@ def play():
     player_x = 100
     player_y = 400
     player_hp = 3
-    zombie_list_in_game = []
+
     # подгружаем музыку
     bg_sound = pygame.mixer.Sound('Materials/Music/ForestWalk.mp3')
     bg_sound.play()  # запускаем музыку
@@ -51,18 +55,26 @@ def play():
     restart_label = label.render('Play again', False, 'DarkGreen')
     restart_label_rect = restart_label.get_rect(topleft=(500, 350))
 
+    win_label = label.render('You win!', False, 'LightGreen')
+    win_label_rect = win_label.get_rect()
+
     ammo_max = 7
     ammo = ammo_max
-    # db.addindb()
-    bullets = []
-    score = 0
+    score = 1
+    timer = 0
+
     # создаём переменную для понимания проиграл игрок или нет
     gameplay = True
 
     running = True
     while running:
-        keys = pygame.key.get_pressed()
 
+        if timer >= 420:
+            win.win()
+
+
+        keys = pygame.key.get_pressed()
+        timer += 1
         screen.blit(bg, (bg_x, 0))
         screen.blit(bg, (bg_x + 1200, 0))
 
@@ -165,8 +177,11 @@ def play():
                         for (index, enemy) in enumerate(zombie_list_in_game):
                             if el.colliderect(enemy):
                                 zombie_list_in_game.pop(index)
-                                bullets.pop(i)
-                                score += 10
+                                if bullets:
+                                    bullets.pop(i)
+                                    score += 100
+                                else:
+                                    pass
 
         else:
             # заполняем экран таким цветом при проигрыше
@@ -196,7 +211,9 @@ def play():
             if event.type == pygame.QUIT:  # если событие это нажатие на выход
                 running = False
                 print(score)
-                db.addindb('vika', score)  # записываю всё в бд
+                sec = ceil(timer/14)
+                print(sec)
+                db.addindb('new_player', sec, score + (sec * 10) - 1) # записываю всё в бд
                 pygame.quit()  # То игры закроется. После этого действия никакие другие не должны быть
             # при срабатывании USEREVENT добавляем в список коллайдер от зомби, по координатам которого мы будем
             # рисовать на экране самого зомби
