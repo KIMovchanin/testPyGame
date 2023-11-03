@@ -2,7 +2,9 @@ import random
 import sqlite3
 
 
+
 def addindb():
+    import main
     with sqlite3.connect("scores.db") as con:
         cur = con.cursor()
 
@@ -12,6 +14,6 @@ def addindb():
         score INTEGER DEFAULT 0
         )""")
 
-        name = input("Your name? > ")
-        ran = random.randint(5, 5000)
-        cur.execute(f"INSERT OR IGNORE INTO scores (name, score) VALUES (?, ?)", (name, ran))
+        name = 'test'
+        # ran = random.randint(5, 5000)
+        cur.execute(f"INSERT OR IGNORE INTO scores (name, score) VALUES (?, ?)", (name, main.score))
